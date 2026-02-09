@@ -1,5 +1,6 @@
 package com.rays.common;
 
+import org.hibernate.exception.JDBCConnectionException;
 import org.springframework.dao.DataAccessException;
 import org.springframework.dao.DataAccessResourceFailureException;
 import org.springframework.http.HttpStatus;
@@ -11,7 +12,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 /**
  * Handles application propagated exceptions
  * 
- * SANAT KUMAR CHOUHAN
+ * YOGESH SEN
  *
  */
 
@@ -19,7 +20,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 public class ApplicationExceptionHandlerCtl {
 
 	// All database related problems
-	@ExceptionHandler({ CannotCreateTransactionException.class, DataAccessResourceFailureException.class })
+	@ExceptionHandler({ CannotCreateTransactionException.class, DataAccessResourceFailureException.class , JDBCConnectionException.class})
 	public ResponseEntity<ORSResponse> handleDatabaseException(Exception e) {
 
 		ORSResponse res = new ORSResponse(false);
