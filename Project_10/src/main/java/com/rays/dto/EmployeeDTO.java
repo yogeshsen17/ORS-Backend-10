@@ -8,6 +8,7 @@ import javax.persistence.Table;
 
 import com.rays.common.BaseDTO;
 
+
 @Entity
 @Table(name = "ST_EMPLOYEE")
 public class EmployeeDTO extends BaseDTO {
