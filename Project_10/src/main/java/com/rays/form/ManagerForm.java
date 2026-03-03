@@ -1,11 +1,12 @@
 package com.rays.form;
 
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 
 import com.rays.common.BaseDTO;
 import com.rays.common.BaseForm;
 import com.rays.dto.ManagerDTO;
-
 
 public class ManagerForm extends BaseForm{
 	
@@ -15,7 +16,9 @@ public class ManagerForm extends BaseForm{
 	@NotEmpty(message= "please enter Branch Name")
 	private String branchName;
 	
-	@NotEmpty(message= "please enter Contact Number")
+	
+	@NotNull(message= "please enter Contact Number")
+	@Pattern(regexp = "(^$|[0-9]{10})")
 	private String contactNumber;
 
 	public String getContactNumber() {
