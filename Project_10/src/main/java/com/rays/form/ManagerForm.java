@@ -5,7 +5,7 @@ import javax.validation.constraints.NotEmpty;
 import com.rays.common.BaseDTO;
 import com.rays.common.BaseForm;
 import com.rays.dto.ManagerDTO;
-import com.rays.dto.OrderDTO;
+
 
 public class ManagerForm extends BaseForm{
 	
